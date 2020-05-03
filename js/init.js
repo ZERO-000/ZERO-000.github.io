@@ -36,6 +36,23 @@ $(document).ready(function($){
     
     
     
+    $("#scrollTop").hide()
+    $(function(){             
+        $(window).scroll(function(){                 
+            if($(this).scrollTop()>20){
+                $("#scrollTop").fadeIn();    
+            } else {      
+                $("#scrollTop").fadeOut();  
+            }          
+        })
+    })
+
+    $("#scrollTop").click(function(){            
+         $("html,body").animate({scrollTop:0},500);//点击go to top按钮时，以800的速度回到顶部，这里的800可以根据你的需求修改             
+         return false;         
+    });
+
+
     // var y = $(window).scrollTop(); 
     // $(window).scrollTop(y+.2+"px");
     // var windowH, scrollTop, oSetTop
@@ -56,10 +73,3 @@ $(document).ready(function($){
         // // }
 
     });
-// $(document).ready(function($){   
-//     //$('.fade-up, .fade-down, .bounce-in, .flip-in').addClass('no-display');
-//     // $('.fade-up').one('inview', function() {
-//     //     $(this).addClass('wow fadeInLeftBig appear');
-//     // });
-
-// });
