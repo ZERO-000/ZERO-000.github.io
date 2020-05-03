@@ -29,6 +29,13 @@ header {
     right: 0;
     height: 10vh;
 }
+
+
+#home, #content-wrapper, #product, #about {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
 .flex{
     display: flex;
     flex-direction: row;
@@ -331,7 +338,8 @@ p.context-p {
     right: 0;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 9;
-    color: #f8f8f8
+    color: #f8f8f8;
+    cursor: pointer;
 }
 #scrollTop  p{
     padding: 10px;
