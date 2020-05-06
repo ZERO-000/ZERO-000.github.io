@@ -364,6 +364,7 @@ p.context-p {
     text-align: center;
     line-height: 1rem;
     padding: 10px 0;
+    display: none;
 }
 #scrollTop  p{
     padding: 0 10px;

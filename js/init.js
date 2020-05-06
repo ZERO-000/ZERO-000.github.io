@@ -35,7 +35,19 @@ $(document).ready(function($){
     })
     
     
-    
+    wow = new WOW(
+        {
+          animateClass: 'animated',
+          offset:       100,
+          callback:     function(box) {
+            console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+          }
+        }
+      );
+      wow.init();
+
+
+
     $("#scrollTop").hide()
     $(function(){             
         $(window).scroll(function(){                 
@@ -53,23 +65,15 @@ $(document).ready(function($){
     });
 
 
-    // var y = $(window).scrollTop(); 
-    // $(window).scrollTop(y+.2+"px");
-    // var windowH, scrollTop, oSetTop
-    // windowH = $(window).height()
-    // $(window).scroll(function(){
-        //     scrollTop = $(this).scrollTop()
-    //     $('.fade-up').each(function () {
-        //         oSetTop = $(this).offset().top
-        //         if (windowH + scrollTop > oSetTop) {
-    //             $(this).addClass("animated fadeInUp appear")
-    //         }
-    //     })
-    //     // console.log(windowH, scrollTop, oSetTop)
-    // })
-    
-    // // if (windowH + scrollTop > oSetTop) {
-        // //     $(this).addClass("animated fadeInUp appear")
-        // // }
+});
 
-    });
+$(document).ready(function($){
+    var ua = navigator.userAgent;
+    var ipad = ua.match(/(iPad).*OS\s([\d_]+)/)
+    isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/)
+    isAndroid = ua.match(/(Android)\s+([\d.]+)/)
+    isMobile = isIphone || isAndroid
+    if (isMobile) {
+      $('.bgimg img').attr("src", "images/slider-1.jpg")
+    }
+})
