@@ -74,6 +74,44 @@ $(document).ready(function($){
     isAndroid = ua.match(/(Android)\s+([\d.]+)/)
     isMobile = isIphone || isAndroid
     if (isMobile) {
-      $('.bgimg img').attr("src", "images/slider-1.jpg")
+      $('.swiper-slide img').addClass('v-h')
+      $('.category-item img').addClass('ct-i')
+      $('category-item title').addClass('ct-t')
+      $('category-item description').addClass('ct-d')
+      var img = $('.swiper-slide img')
+      for (let i = 1; i < img.length-1; i++) {
+        img[i].setAttribute("src", "images/slider-"+i+".jpg")
+      }
+      img[0].setAttribute("src", "images/slider-3.jpg")
+      img[4].setAttribute("src", "images/slider-1.jpg")
+      $('.swiper-slide img').removeClass('v-h')
     }
 })
+
+
+// $(document).ready(function($){
+//   var ua = navigator.userAgent;
+//   var ipad = ua.match(/(iPad).*OS\s([\d_]+)/)
+//   isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/)
+//   isAndroid = ua.match(/(Android)\s+([\d.]+)/)
+//   isMobile = isIphone || isAndroid
+//   if (isMobile) {
+//     var picHref = [];
+//     $(".swiper-slide .rel .bgimg").each(function(){
+//       picHref.push($(this).find("img").attr("src"));//存放图片原地址
+//     });
+//     //alert(picHref[0]);
+//     $(".swiper-slide .rel .bgimg").click(function(){
+//         //alert($(this).find("img").attr("src"));
+//         var src_2 = $(this).find("img").attr("src_2");//获取点击后新的图片地址
+//         $(this).find("img").attr("src",src_2);//添加当前新地址图片
+//         //给同级元素替换回原来的图片地址
+//         $(this).siblings().each(function(){
+//             var index = $(this).index();
+//             //alert(index);
+//             $(this).find("img").attr("src",picHref[index]);
+//         });    
+//         return false;
+//     });
+//  }
+// })

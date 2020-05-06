@@ -1,11 +1,14 @@
 
  *{
-     padding: 0;
+     padding: 0 ;
      margin: 0;
  }
  html {
      font-size: 1rem;
  }
+ /* .container {
+     padding: 0 !important;
+ } */
  html,body {
      width: 100%;
      height:100%;
@@ -37,6 +40,9 @@ header {
     height: 10vh;
 }
 
+.v-h{
+    visibility: hidden;
+}
 
 #home, #content-wrapper, #product, #about {
     -webkit-transition: all .5s;
@@ -247,18 +253,19 @@ p.context-p {
     letter-spacing: 1px
 }
 
+
 .caption .description {
     font-size: 13px;
     opacity: 0;
 }
 
-.category-item:hover img{
+.category-item:hover img, .ct-i{
     transform: translate3d(0px,0,0);
 }
-.category-item:hover .caption .title  {
+.category-item:hover .caption .title , .ct-t {
     transform: translateY(-100%);
 }
-.category-item:hover .caption .description {
+.category-item:hover .caption .description , .ct-d{
     transform: translateY(-90%);
     opacity: 1;
 }
