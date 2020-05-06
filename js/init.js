@@ -74,10 +74,11 @@ $(document).ready(function($){
     isAndroid = ua.match(/(Android)\s+([\d.]+)/)
     isMobile = isIphone || isAndroid
     if (isMobile) {
+      // $('.container').removeClass('container')
       $('.swiper-slide img').addClass('v-h')
       $('.category-item img').addClass('ct-i')
-      $('category-item title').addClass('ct-t')
-      $('category-item description').addClass('ct-d')
+      $('.caption p.title').addClass('ct-t')
+      $('.caption p.description').addClass('ct-d')
       var img = $('.swiper-slide img')
       for (let i = 1; i < img.length-1; i++) {
         img[i].setAttribute("src", "images/slider-"+i+".jpg")

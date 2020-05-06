@@ -39,7 +39,6 @@ header {
     right: 0;
     height: 10vh;
 }
-
 .v-h{
     visibility: hidden;
 }
@@ -260,14 +259,14 @@ p.context-p {
 }
 
 .category-item:hover img, .ct-i{
-    transform: translate3d(0px,0,0);
+    transform: translate3d(0px,0,0) !important;
 }
 .category-item:hover .caption .title , .ct-t {
-    transform: translateY(-100%);
+    transform: translateY(-100%) !important;
 }
 .category-item:hover .caption .description , .ct-d{
-    transform: translateY(-90%);
-    opacity: 1;
+    transform: translateY(-90%) !important;
+    opacity: 1 !important;
 }
 
 .parallax{
@@ -404,7 +403,7 @@ p.context-p {
     .navbar-nav {
         width: 180px;
         top: -70px;
-        right: -10px;
+        right: 0px;
         padding-top: 60px;
     }
     .navbar-nav li {
