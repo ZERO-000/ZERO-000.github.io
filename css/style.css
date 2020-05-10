@@ -40,7 +40,8 @@ header {
     height: 10vh;
 }
 .v-h{
-    visibility: hidden;
+    visibility: hidden !important;
+    opacity: 0;
 }
 
 #home, #content-wrapper, #product, #about {
@@ -122,6 +123,7 @@ button.navbar-toggler {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+    opacity: 0;
 }
 .swiper-button-next{
     margin-right: 10px;
@@ -379,6 +381,8 @@ p.context-p {
 
 
 
+
+
 @media (max-width: 500px){
     .separator{
         border:1px dashed #7a7a7a;
@@ -430,11 +434,14 @@ p.context-p {
 }
 
 .appear {
-    opacity: 1;
-    -webkit-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+    opacity: 1 !important;
+    -webkit-transition: all .4s ease-in-out !important;
+    -moz-transition: all .4s ease-in-out !important;
+    -o-transition: all .4s ease-in-out !important;
+    transition: all .4s ease-in-out !important;
+}
+.ov-x {
+    overflow-x: hidden !important;
 }
 
 /* @media (min-width:768px){
