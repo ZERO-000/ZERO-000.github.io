@@ -495,7 +495,7 @@ p.context-p {
     width: 50px;
     height: 220px;
     cursor: pointer;
-    background-color: #000000c2;
+    background-color: rgba(0, 0, 0, 0.76);
     text-align: right;
     border: solid .5px #fff;
 }
