@@ -115,10 +115,12 @@ feedback()
   $("#scrollTop").hide()
   $(function(){             
       $(window).scroll(function(){                 
-          if($(this).scrollTop()>20){
-              $("#scrollTop").fadeIn();    
+          if($(this).scrollTop()>600){
+            $("#scrollTop").fadeIn();
+            $(".side").fadeIn();           
           } else {      
               $("#scrollTop").fadeOut();  
+              $(".side").fadeOut();  
           }          
       })
   })

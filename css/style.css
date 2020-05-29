@@ -498,6 +498,7 @@ p.context-p {
     background-color: rgba(0, 0, 0, 0.76);
     text-align: right;
     border: solid .5px #fff;
+    display: none;
 }
 .side p{
     color: #f8f8f8;
