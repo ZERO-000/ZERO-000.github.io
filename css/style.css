@@ -495,7 +495,15 @@ p.context-p {
     width: 50px;
     height: 220px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #000000c2;
+    text-align: right;
+    border: solid .5px #fff;
+}
+.side p{
+    color: #f8f8f8;
+    width: 80%;
+    position: relative;
+    top: 38%;
 }
 
 
