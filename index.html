@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/simple-line-icons.min.css">
+  <link rel="stylesheet" href="css/iconfont.css">
+  <style type="text/css">
+    .swiper-slide {
+      flex-flow: column;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,25 +29,49 @@
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#home">首页</a>
+            <a class="nav-link" href="#home">Backwin</a>
           </li> 
           <li class="nav-item">
-            <a class="nav-link" href="#content-wrapper">热销产品</a>
+            <a class="nav-link" href="#content-wrapper">产品中心</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#product">产品介绍</a>
+            <a class="nav-link" href="#product">关于我们</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#about">品牌资讯</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#about">代理合作</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="#about">联系我们</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">ENGLISH</a>
-          </li>        
+            <li class="nav-item dropdown" href="">
+              <a class="nav-link" data-toggle='dropdown' href="#about">网上商城
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">
+                  <span class="iconfont icon-tianmaotmall"></span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <span class="iconfont icon-tianmaotmall"></span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <span class="iconfont icon-tianmaotmall"></span>
+                </a>
+              </div>
+            </li>   
         </ul>
-      </div>  
+        <div class="lang d-none d-md-block">
+          <a class="lang_a" href="#">
+            <i class="iconfont icon-language"></i>
+              <span>EN</span>
+          </a>
+        </div>  
+      </div>
     </nav>
   </header>      
-  <section id="home" class="swiper-container">
+  <section id="home" class="swiper-container swiper1">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="rel mask">
@@ -77,9 +107,12 @@
         </div>
       </div>
     </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper1_next">
+      <div class="swiper-button-next"></div>
+    </div>
+    <div class="swiper1_prev">
+      <div class="swiper-button-prev"></div>
+    </div>
   </section><!--swiper-container-->
   <section id="content-wrapper">
     <section id="services" class="white">
@@ -88,85 +121,110 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="center gap fade-down section-heading">
-                    <h2 class="main-title">热销耳机</h2>
+                    <h2 class="main-title">产品中心</h2>
                     <div class="separator">
                       <span>hot</span>
                     </div>
                 </div>
             </div><!--col-md-12-->
         </div><!--row-->
-
-        <div class="row flex">
-          <div class="col-md-6 col-lg-4">
-            <div class="category-item wow fadeInUp appear hov" data-wow-delay="0s">
-              <img src="images/distination-1.jpg" alt="">
-              <div class="caption">
-                <div>
-                  <p class="title">磁吸运动耳机</p>
-                  <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
+        <div class="swiper2 swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="category-item wow fadeInUp appear hov" data-wow-delay="0s">
+                <img src="images/distination-1.jpg" alt="">
+                <div class="caption">
+                  <div>
+                    <p class="title">磁吸运动耳机</p>
+                    <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
+                  </div>
+                </div>
+              </div>
+              <div class="category-item wow fadeInUp appear hov" data-wow-delay="0s">
+                <img src="images/distination-1.jpg" alt="">
+                <div class="caption">
+                  <div>
+                    <p class="title">磁吸运动耳机</p>
+                    <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div><!--col-md-6 col-lg-4-->
-          <div class="col-md-6 col-lg-4">
-            <div class="category-item wow fadeInUp" data-wow-delay=".2s">
-              <img src="images/distination-2.jpg" alt="">
-              <div class="caption">
-                <div>
-                  <p class="title">磁吸运动耳机</p>
-                  <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
+            <div class="swiper-slide">
+              <div class="category-item wow fadeInUp appear hov" data-wow-delay="0s">
+                <img src="images/distination-2.jpg" alt="">
+                <div class="caption">
+                  <div>
+                    <p class="title">磁吸运动耳机</p>
+                    <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
+                  </div>
+                </div>
+              </div>
+              <div class="category-item wow fadeInUp appear hov" data-wow-delay="0s">
+                <img src="images/distination-3.jpg" alt="">
+                <div class="caption">
+                  <div>
+                    <p class="title">磁吸运动耳机</p>
+                    <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category-item wow fadeInUp appear hov" data-wow-delay="0s">
+                <img src="images/distination-4.jpg" alt="">
+                <div class="caption">
+                  <div>
+                    <p class="title">磁吸运动耳机</p>
+                    <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
+                  </div>
+                </div>
+              </div>
+              <div class="category-item wow fadeInUp appear hov" data-wow-delay="0s">
+                <img src="images/distination-1.jpg" alt="">
+                <div class="caption">
+                  <div>
+                    <p class="title">磁吸运动耳机</p>
+                    <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category-item wow fadeInUp appear hov" data-wow-delay="0s">
+                <img src="images/distination-6.jpg" alt="">
+                <div class="caption">
+                  <div>
+                    <p class="title">磁吸运动耳机</p>
+                    <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
+                  </div>
+                </div>
+              </div>
+              <div class="category-item wow fadeInUp appear hov" data-wow-delay="0s">
+                <img src="images/distination-1.jpg" alt="">
+                <div class="caption">
+                  <div>
+                    <p class="title">磁吸运动耳机</p>
+                    <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="category-item wow fadeInUp" data-wow-delay=".4s">
-              <img src="images/distination-3.jpg" alt="">
-              <div class="caption">
-                <div>
-                  <p class="title">磁吸运动耳机</p>
-                  <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
-                </div>
-              </div>
-            </div>
-          </div><!--col-md-6 col-lg-4-->
-          <div class="col-md-6 col-lg-4">
-            <div class="category-item wow fadeInUp" data-wow-delay="0s">
-              <img src="images/distination-4.jpg" alt="">
-              <div class="caption">
-                <div>
-                  <p class="title">磁吸运动耳机</p>
-                  <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
-                </div>
-              </div>
-            </div>
-          </div><!--col-md-6 col-lg-4-->
-          <div class="col-md-6 col-lg-4">
-              <div class="category-item wow fadeInUp" data-wow-delay=".2s">
-                <img src="images/distination-6.jpg" alt="">
-                <div class="caption">
-                  <div>
-                    <p class="title">磁吸运动耳机</p>
-                    <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
-                  </div>
-                </div>
-              </div>
-          </div><!--/.col-md-6 col-lg-4-md-4-->
-          <div class="col-md-6 col-lg-4">
-              <div class="category-item wow fadeInUp" data-wow-delay=".4s">
-                <img src="images/distination-6.jpg" alt="">
-                <div class="caption">
-                  <div>
-                    <p class="title">磁吸运动耳机</p>
-                    <p class="description">先进的降噪技术和环境声模式 / IPX4级防泼溅</p>
-                  </div>
-                </div>
-              </div>
-          </div><!--col-md-6 col-lg-4-->
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </div><!--container-->
     </section><!--services-->
   </section><!--content-wrapper-->
+  <div id="proVidoe">
+    <div class="mask">
+      <div class="play-pause">
+        <i class="iconfont icon-play"></i>
+      </div>
+      <video class="pause" src="./video/index.mp4" poster="./images/slider-1-pc.jpg"></video>
+    </div>
+  </div>
   <section id="product" class="parallax">
     <div class="row justify-content-center">
       <div class="col-12">
@@ -220,38 +278,97 @@
     </div><!--container-->
   </section>
   <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center wow fadeInUp" data-wow-delay=".2s">
+            <p class="biaoti h2 font-weight-light">运营中心</p>
+            <div class="neirong">
+              <p>广州市白云区石沙路18号石建大厦C栋6楼</p>
+              <p>+86-020-36610959 &nbsp;&nbsp;<a href="mailto:">邮箱：info@backwin.com</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 text-center wow fadeInUp" data-wow-delay=".3s">
+            <p class="h2 font-weight-light">研发工厂</p>
+            <div class="neirong">
+              <p>广东省东莞市石排镇福隆村福隆古塔五路59号4楼</p>
+              <p> +86-769-86659919 </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="footer-main py-4">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-sm-2">
             <div class="footer-item wow fadeInUp" data-wow-delay="0">
-              <img class="mt-4" width="100" src="/images/backwinlogo.gif" alt="">
+              <img class="mt-4" width="100" src="./images/backwinlogo.gif" alt="">
               <div class="mt-4 mb-4">
-                <button type="button" class="p-0 px-2 btn btn-bg">
-                  Newsletter signup
-                </button>
+                <div>
+                  <a href="" style="color: #31d2fb">BACKWIN倍客维</a>
+                </div>
               </div>
             </div><!--footer-item-->
           </div>
-          <div class="col-md-6">
+          <div class="col-sm-4">
             <div class="footer-item wow fadeInUp " data-wow-delay=".2s">
               <ul class="mb-4">
-                <li class="mt-4">联系我们：</li>
-                <li class="mt-2">广州市白云区石井街道石沙路18号君天商务大厦B座3楼</li>
-                <li class="mt-2">电话：(020)36610959</li>
-                <li class="mt-2"><a href="mailto:">邮箱：info@backwin.com</a></li>
+                <li class="mt-4">让音乐感动您</li>
+                <li class="mt-1">我们不懈努力，只为您提供优质的产品和超凡的使用体验</li>
               </ul>
             </div><!--footer-item-->
           </div>
-          <div class="col-md-3">
+          <div class="col-sm-4">
             <div class="footer-item wow fadeInUp" data-wow-delay=".4s">
-              <ul class="mb-4">
-                <li class="mt-4">做最厚道的耳机：</li>
-                <li class="mt-2">更贴合更隔音</li>
-                <li class="mt-2">长时间的舒适聆听</li>
-                <li class="mt-2">沉浸式聆听</li>
-              </ul>
+              <div class="row item_x">
+                <div class="col-md-4 item_xul">
+                  <ul class="mb-4">
+                    <li class="mt-4">产品中心</li>
+                    <li class="mt-1">关于我们</li>
+                    <li class="mt-1">品牌资讯</li>
+                    <li class="mt-1">代理合作</li>
+                    <li class="mt-1">联系我们</li>
+                  </ul>
+                </div>
+                <div class="col-md-4 item_xul">
+                  <ul class="mb-4">
+                    <li class="mt-4">网上商店</li>
+                    <li class="mt-1">京东</li>
+                    <li class="mt-1">亚马逊</li>
+                  </ul>
+                </div>
+                <div class="col-md-4 item_xul">
+                  <ul class="mb-4">
+                    <li class="mt-4">隐私政策</li>
+                    <li class="mt-1">百科</li>
+                  </ul>
+                </div>
+              </div>
+
             </div><!--footer-item-->
+          </div>
+          <div class="col-sm-2">
+            <div class="footer-item wow fadeInUp" data-wow-delay='.6s'>
+              <ul class="mb-4">
+                <li class="mt-4">
+                  <i class="iconfont icon-weixin"></i>
+                  <a>Wechat</a>
+                </li>
+                <li class="mt-1">
+                  <i class="iconfont icon-twitter"></i>
+                  <a>Twitter</a>
+                </li>
+                <li class="mt-1">
+                  <i class="iconfont icon-Facebook"></i>
+                  <a>Facebook</a>
+                </li>
+                <li class="mt-1">
+                  <i class="iconfont icon-weibo"></i>
+                  <a>Wweibo</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div><!--row-->
       </div><!--container-->
@@ -260,17 +377,60 @@
       <div class="container">
         <div class="row mt-4">
           <div class="col-md-6">
-            <p>@ 2018</p>
+            <p>版权所有</p>
           </div>
           <div class="col-md-6 ta-r">
-            <p><img width="200" src="/images/visa-mastercard-paypal.png" alt="Visa Mastercard Paypal"></p>
+            <div class="lang1 d-none d-md-block">
+              <a class="lang_a" href="#">
+                <i class="iconfont icon-language"></i>
+                  <span>EN</span>
+              </a>
+            </div> 
           </div>
         </div>
       </div>
     </div><!--footer-bottom-->
   </footer>
-  <div id="scrollTop" class="icon-arrow-up icons"> 
+<!--   <div id="scrollTop" class="icon-arrow-up icons"> 
     <p>TOP</p>
+  </div> -->
+  <div class="side clean m-pic" style="display: block;">
+    <img src="./images/icon5.jpg" alt="">
+  </div>
+
+  <div class="feedback">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal">
+        <span>&times;</span>
+      </button>
+      <div class="modal-header">
+        <h5 class="modal-title w-100 text-center">信息咨询</h5>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="tab-content">
+            <form action="" class="tab-pane active show">
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="姓名">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="phone" placeholder="电话">
+              </div>                
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="邮箱">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="fav" placeholder="喜欢的产品">
+              </div>
+              <div class="form-group">
+                <textarea rows="4" name="Message" class="mess border-box form-control" placeholder="有什么想对倍客维说" check="str" tip="Please fill in your requirements"></textarea>
+              </div>
+              <button type="submit" class="w-100 btn btn-secondary">提交</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="js/jquery.min.js"></script>
   <script src="js/wow.min.js"></script>

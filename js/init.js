@@ -3,7 +3,7 @@ $(document).ready(function($){
 
     // $('html,body').stop().animate({scrollTop: '0px'}, 100)
 
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('.swiper1', {
       direction: 'horizontal', // 垂直切换选项
       loop: true, // 循环模式选项
       // autoplay:false,
@@ -23,29 +23,93 @@ $(document).ready(function($){
       },
       
       // 如果需要分页器
-      pagination: {
-          el: '.swiper-pagination',
-      },
+      // pagination: {
+      //     el: '.swiper-pagination',
+      // },
       
       // 如果需要前进后退按钮
       navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper1_next .swiper-button-next',
+          prevEl: '.swiper1_prev .swiper-button-prev',
       },
   })
   
     
+
+
+  var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      // init: false,
+      // centeredSlides:true,
+      offsetPxBefore:1000,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        750: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+      },
+    });
   wow = new WOW(
       {
         animateClass: 'animated',
-        offset:       100,
-        callback:     function(box) {
+        offset: 100,
+        // callback: function(box) {
           
-        }
+        // }
       }
     );
     wow.init();
 
+
+  $("#proVidoe").click(function(){
+    // $(this).find("video")[0].play
+    // $(this).find(".mask").removeClass("mask")
+    // console.log($(this).find("video")[0].play())
+    console.log($(this).find("video").hasClass('pause'))
+     if($(this).find("video").hasClass('pause')){
+            $(this).find("video").removeClass('pause');
+            $(this).find("video").addClass('play');
+            $(this).find("video")[0].play()
+            $(this).find(".mask").removeClass("mask")
+ 
+        }else{
+            $(this).find("video").removeClass('play');
+            $(this).find("video").addClass('pause');
+            $('#proVidoe div:first-child').addClass('mask');
+            $(this).find("video")[0].pause()
+        }
+  })
+
+
+function feedback(){
+  $('.side').click(function(){
+    $('.feedback').show()
+  })
+  $('.close').click(function(){
+    $('.feedback').hide()
+  })
+  setTimeout(()=>{
+    $('.feedback').show()
+  },3000)  
+}
+feedback()
 
 
   $("#scrollTop").hide()
@@ -65,6 +129,7 @@ $(document).ready(function($){
   });
 
 
+
 });
 
 $(document).ready(function($){
@@ -75,13 +140,16 @@ $(document).ready(function($){
   isMobile = isIphone || isAndroid
   if (isMobile) {
     // $('.ov-x').removeClass('container')
-    $('.swiper-slide img').addClass('v-h')
+    $('.swiper1 .swiper-slide img').addClass('v-h')
+    // $('.swiper2 .swiper-slide').css({width:'100%'})
+    // $('.swiper2 .swiper-wrapper').css({padding:'50px'})
     // $('#services').find('div[class="container"]').addClass("ov-x")
-    $('#services').find('div[class="container ov-x"]').removeClass("container")
+    // $('#services').find('div[class="container ov-x"]').removeClass("container")
+    $('.proVidoe').find('div[class="container"]').removeClass("container")
     $('.category-item img').addClass('ct-i')
     $('.caption p.title').addClass('ct-t')
     $('.caption p.description').addClass('ct-d')
-    var img = $('.swiper-slide img')
+    var img = $('.swiper1 .swiper-slide img')
     var i;
     for (i = 1; i < img.length-1; i++) {
       img[i].setAttribute("src", "images/slider-"+i+".jpg")
@@ -91,12 +159,12 @@ $(document).ready(function($){
     console.log(i)
     setTimeout(()=>{
       if (i == img.length-1) {
-        $('.swiper-container img').addClass('appear')
-        $('.swiper-slide img').removeClass('v-h')      
+        $('.swiper1.swiper-container img').addClass('appear')
+        $('.swiper1 .swiper-slide img').removeClass('v-h')      
       }
-    },500)
+    },800)
   }else{
-    $('.swiper-container img').css({opacity:1})
+    $('.swiper1.swiper-container img').css({opacity:1})
   }
 })
 
