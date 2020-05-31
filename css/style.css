@@ -521,6 +521,11 @@ p.context-p {
     #proVidoe .play-pause i{
         font-size: 25px;
     }
+    .side {
+        width: 33px;
+        height: 146px;
+        font-size: 12px;
+    }
 }
 @media (min-width:768px) {
         .item_x {
