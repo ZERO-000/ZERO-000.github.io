@@ -107,7 +107,7 @@ function feedback(){
   })
   setTimeout(()=>{
     $('.feedback').show()
-  },3000)  
+  },5000)  
 }
 feedback()
 

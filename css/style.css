@@ -31,7 +31,13 @@ button,div,a{
 ul,li,a{
     list-style: none;
 }
-
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
 header {
     position: absolute;
     top:0;
@@ -101,10 +107,11 @@ nav a{
 }
 #collapsibleNavbar {
     position: relative;
-     height: 100%; 
+     /* height: 100%;  */
 }
 li.nav-item {
-    font-size: 14px;
+    font-size: 13px;
+    margin-left: 15px;
     text-align: center;
 }
 .dropdown-menu {
@@ -425,6 +432,9 @@ p.context-p {
 .footer-top .neirong {
     font-size: 14px;
 }
+.logo_wz {
+    min-width: 100px;
+}
 .footer-top .neirong a {
     color: #000;
 }
@@ -454,11 +464,12 @@ p.context-p {
 }
 .item_x{
     text-align: left;
-    width: 62%;
+    /* width: 62%; */
     margin-left: 10px;
 }
 .item_xul{
     padding: 0;
+    min-width: 72px;
 }
 
 .lang1 i{
@@ -497,7 +508,7 @@ p.context-p {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.76);
     text-align: right;
-    border: solid .5px #fff;
+    border: solid .5px rgba(255, 255, 255, 0.719);
     display: none;
 }
 .side p{
@@ -529,7 +540,7 @@ p.context-p {
 }
 @media (min-width:768px) {
         .item_x {
-        width: 100% ;
+        width: 103% ;
     }
     .navbar-nav {background-color: rgba(255, 255, 255, 0);}
 }
@@ -538,9 +549,9 @@ p.context-p {
         /* line-height: 80px; */
         /* border: solid 1px; */
     }
-    .item_x {
+    /* .item_x {
         width: 62% ;
-    }
+    } */
 }
 @media (max-width:767px) {
 
@@ -561,6 +572,28 @@ p.context-p {
         font-size: 16px;
         margin-top: 30px;
     }
+    .footer-main {
+        font-size: 13px;
+    }
+    .item_x {
+        display: block !important;
+        margin-left: 0 !important;
+    }
+    .item_xul ul {
+        width: max-content;
+        margin-bottom: 5px !important;
+    }
+    .item_xul li {
+        float: left;
+        margin: 0 5px !important;
+    }
+    .contact li{
+        float: left;
+        margin: 0 5px !important;
+    }
+    .mb-4 {
+        margin-bottom: .5rem !important;
+    } 
 }
 @media (max-width: 576px){
     /* html {font-size: 1.25rem;} */
