@@ -109,6 +109,9 @@ nav a{
     position: relative;
      /* height: 100%;  */
 }
+.collapsing {
+  overflow:visible !important;
+}
 li.nav-item {
     font-size: 13px;
     margin-left: 15px;
@@ -387,7 +390,7 @@ p.context-p {
     padding-bottom: 20px;
 }
 .infography {
-    padding: 20px 0px 20px 20px;
+    padding: 20px 0px 20px 0px;
     position: relative;
     height: 100%;
 }
