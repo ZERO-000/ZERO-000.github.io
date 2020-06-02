@@ -50,7 +50,7 @@ header {
     opacity: 0;
 }
 
-#home, #content-wrapper, #product, #about {
+#home, #content-wrapper, #about {
     -webkit-transition: all .5s;
     transition: all .5s;
 }
